@@ -1,11 +1,9 @@
 // This #include statement was automatically added by the Particle IDE.
 #include <HX711ADC.h>
-
-// This #include statement was automatically added by the Particle IDE.
-#include <HX711ADC.h>
-
-// HX711.DOUT	- pin #A1
-// HX711.PD_SCK	- pin #A0
+//vdd - pin vin
+//vcc - pin 3v3
+// HX711.DOUT or hx711 data	- pin #A1
+// HX711.PD_SCK	or hx711 clk - pin #A0
 
 HX711ADC scale(A1, A0);		// parameter "gain" is ommited; the default value 128 is used by the library
 
@@ -28,7 +26,7 @@ void setup() {
   Serial.println(scale.get_units(5), 1);	// print the average of 5 readings from the ADC minus tare weight (not set) divided 
 						// by the SCALE parameter (not set yet)  
 
-  scale.set_scale(2280.f);                      // this value is obtained by calibrating the scale with known weights; see the README for details
+  scale.set_scale(2310.f);                      // this value is obtained by calibrating the scale with known weights; see the README for details
 //   scale.set_scale();
   scale.tare();				        // reset the scale to 0
 
