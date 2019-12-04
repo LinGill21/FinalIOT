@@ -4,6 +4,9 @@
 //vcc - pin 3v3
 // HX711.DOUT or hx711 data	- pin #A1
 // HX711.PD_SCK	or hx711 clk - pin #A0
+// Servo - A2
+// Photo resister - A3
+
 
 HX711ADC scale(A1, A0);		// parameter "gain" is ommited; the default value 128 is used by the library
 
